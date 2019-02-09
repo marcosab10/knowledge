@@ -1,0 +1,176 @@
+http://svuxqa3soa102.gvt.net.br:8080/tramitacao-vivocorp-web/
+
+-IP TUNEL
+10.41.254.249 
+
+P9923942
+vivo*2345 
+
+efetuar: sudo su - prd1vlog 
+
+ssh svuxqsoa107
+
+-salvar log em caminho
+scp prd1vlog@svuxqsoa90:/app/prd1bea/SBM70/hiberapps/config/BusinessObjects.hbm.xml /tmp 
+
+
+unzip -c ENABLEMENT_GetAccount.2017-01-02.0.log.zip | less
+-se precisar ler um log dentro de um zip 
+
+
+============================================================
+
+SERVER QA2: http://svuxqa2soa50:7003/sbconsole/jsp/login/login_form.jsp
+
+SERVER QA3: svuxqsoa107:7003/sbconsole
+weblogic
+8626ea0e07
+
+============================================================
+prd1vlog
+gvt25gvt
+sopadelesma
+
+WINSCP
+
+Usuário: 80514411
+gvt*3256 
+
+BPEL Qa3: http://10.129.178.16:7000/em
+
+webmonitor
+think@09
+
+==========================================================
+OSB Legado QA3  **************************************************************************************
+
+sudo su - hom1vlog
+
+ssh 10.41.254.48  
+cd /app/hom1bea/logs/domosbrtlqa
+
+scp hom1vlog@10.41.254.48:/app/hom1bea/logs/domosbrtlqa/mng1node.out /tmp
+
+scp hom1vlog@10.41.254.48:/app/hom1bea/logs/domosbrtlqa/mng1node.out /tmp
+
+-bash-3.00$ scp mng?node.??? p9922466@svuxqsoa24:/home/GVT/p9922466
+
+ scp mng?node.??? 80533839@svuxqsoa24:/home/GVT/80533839    -------------FUNCIONA
+ 
+ scp ENABLEMENT_GetCustomerPortabilityTicket.2017-12-18.0.log.zip 80533839@svuxqsoa24:/tmp
+ 
+ scp mng?node.??? 80533839@svuxqsoa24:/tmp
+
+===================================================================
+cd /app/prd1bea/logs/domosb116qa3/proxy/
+
+sudo su - prd1vlog
+
+QA1
+ssh svuxqa1soa50
+
+QA2
+ssh svuxqa2soa50
+gvt25
+
+QA3
+ssh svuxqsoa107
+
+QA6
+ssh svuxqa6soa50
+
+Comandos linux: 
+
+zgrep -B 1 '8-3312742787-1' *.log.zip
+
+grep -B 1 '8-3653379346-1' *.log
+
+* Listar as ultimas linhas de um arquivo de log
+tail -fn 6000 /app/prd1bea/logs/domosb116qa3/proxy/ENABLEMENT_FormatSpecialAddressStreet.log
+ 
+* Buscar nos arquivos através de uma palavra:
+grep --color "8-1715728425-1" /app/prd1bea/logs/domosb116qa3/proxy/*
+
+* Listar arquivos existentes dentro de um diretório
+ls -ltr /app/prd1bea/logs/domosb116qa3/proxy/*
+
+
+
+tail -fn 6000 ENABLEMENT_Change*
+
+tail -fn 6000 ENABLEMENT_ChangeStatusPortability.log
+
+=============================================================
+
+grep -B 1 '8-3653379346-1' *.log
+
+
+find . -iname "ENABLEMENT_*" -exec zgrep -l '8-3653379346-1' {} \;
+
+zgrep -B 1 '8-3653379346-1' CONSUMER_WorkOrderManagement.2016-12-07.0.log.zip
+
+
+scp prd1vlog@svuxqsoa107:/app/prd1bea/logs/domosb116qa3/proxy/backup/ENTERPRISE_CheckResourceAvailability.2017-04-03.0.log.zip /tmp
+
+=================================================================
+
+
+svuxqa2vdb41  10.42.12.154
+
+10.41.252.113
+
+find . -iname "*.proxy" -exec zgrep -l 'mensagem' {} \;
+
+zgrep '41992483061' *log.zip
+==========================================================================
+
+10.41.254.249
+
+80514411
+brq@1234
+
+http://dtma024186:7001/ServiceManagement/ServiceOrderManagement/ServiceAvailability/ServiceAvailabilityV2?wsdl
+http://dtma024186:7001/ServiceManagement/ServiceOrderManagement/ServiceOrderOrchestration/ServiceOrderOrchestration/V2?wsdl
+
+http://dtma024186:7001/ResourceManagement/NetworkNumberInventoryManagement/NumberInventoryManagement/NumberInventoryManagement?wsdl
+
+http://nbma027215:7001/ResourceManagement/ResourceDomainManagement/ResourceActivation/ResourceActivationService/V1?wsdl
+
+http://nbma027215:7001/CustomerManagement/CustomerProblemManagement/CustomerProblemLifecycleManagement/CustomerProblemLifecycleManagement?wsdl
+
+http://nbma027215:7001/CustomerManagement/CustomerProblemManagement/CustomerProblemLifecycleManagement/CustomerProblemLifecycleManagement?wsdl
+
+http://10.2.60.136:7001/ResourceManagement/ResourceInventoryManagement/ResourceInventoryManagement/V2?wsdl
+
+=========================================
+
+grep -B 3 -A 2 foo README.txt
+If you want the same number of lines before and after you can use -C num.
+grep -C 3 foo README.txt 
+
+==========================================================
+http://www.oracle.com/webfolder/technetwork/tutorials/obe/fmw/tuxedo/10g/tuxedosaltwebservices/JDevSOAExtension.htm
+==============================================================
+Plugin de XQ:
+
+install new software
+
+http://download.eclipse.org/webtools/incubator/repository/xquery/milestones/
+
+seleciona tudo
+==========================================================
+API REST exemplo: findCustomerBills.proxy 
+
+===========================================================
+
+setup.exe -jreLoc C:\jdk1.7.0_79
+
+==================================================
+Plugin do eclipse
+
+http://download.eclipse.org/webtools/incubator/repository/xquery/milestones/ 
+
+
+
+
+

@@ -1,0 +1,124 @@
+git config --global user.name "Marcos Faria"
+git config --global user.email "marcosab10@yahoo.com.br"
+git config --list
+
+// Eliminar warnings de arquivos com caminhos grandes
+git config core.autocrlf true
+
+// Abilitar arquivos com nomes grandes
+git config --system core.longpaths true
+
+//Iniciar o repositório
+git init
+
+//Status do repositorio local
+git status
+
+//Adicionar todos os arquivos recursivamente 
+git add --all
+
+// Commitar os arquivos com um comentário
+git commit -m "Versao Inicial"
+
+// Commitar DIRETO os arquivos com um comentário
+git commit -am "Versao Inicial"
+
+//Informacoes de log de commits
+git log
+
+//Informacoes de log de commits branchs, unmerge
+git log --decorate
+
+//Informacoes de log de commits branchs, unmerge
+git log --author="Marcos Faria"
+
+//Informacoes de log de commits resumido
+git shortlog
+
+//Informacoes de log de commits resumido, apenas os nomes e numeros de commits
+git shortlog -sn
+
+//Mostra em forma grafica o que está acontecendo com a branch
+git log --graph
+
+//Mostra o que teve de alteracao naquele commit
+git show <hash do commit>
+
+//Mostra tudo que foi modificado
+git diff
+
+//Mostra somente os nomes dos arquivos modificados
+git diff --name-only
+
+//Retorna os arquivos para antes da edição
+git checkout <nome_arquivo>
+
+//Retir arquivo da fila do staged para não ser mais commitado
+git reset HEAD <nome_arquivo>
+
+//Voltar versoes do repositorio
+git reset     <hash_anterior>
+--soft //volta para o staged 
+--mixed //volta para antes do staged, modified
+--hard// ignora a existecia do commit e tudo que foi feito nele
+
+//or push an existing repository from the command line
+git remote add BRQ https://github.com/marcosab10/BRQ.git
+git push -u BRQ master
+
+//Mostra o repositorio remoto
+git remote
+
+//Mostra o repositorio remoto, mais informações
+git remote -v
+
+//Enviar as alterações commitadas locais para o repositorio remoto
+git push <repositorio_destino> <repositorio_origem> 
+git push BRQ master
+
+//Baixar tudo o que tem um repositorio em uma nova pasta
+g clone git@github.com:marcosab10/BRQ.git <nome_da_pasta>
+
+//Criar um novo branch a partir do original 
+git checkout -b <nome_novo_branch>
+
+//Mostrar os branchs existentes
+git branch
+
+//Mudar de branch 
+git checkout <nome_branch>
+
+//Apagar um branch
+git branch -D <nome_branch>
+
+//Criar alias para os comandos
+git config --global alias.s status
+
+//Criar tags para mostrar versionamento
+git tag -a 1.0.0 -m "Primeira Release"
+
+//Para subir as tags para o repositorio 
+git push BRQ master --tags
+
+//Visualizar as tags locais
+git tag
+
+//Reverter as mudanças de um commit
+git revert <hashtag_com_erro>
+
+//Apagar tags locais, par depois pagar remoto
+git tag -d <nome_da_tag>
+
+//Apagar tags remotas
+git push BRQ :<nome_da_tag>
+
+
+
+
+
+
+
+
+
+
+

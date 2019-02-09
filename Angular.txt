@@ -1,0 +1,69 @@
+// instalar o cli do angular para criação de projetos 
+npm install -g @angular/cli
+
+// instalar o compilador de typescript
+npm install typescript -g
+
+//compilar apenas um arquivo typescript
+tsc app.tsc
+
+//Monitorar uma pasta para compilar automaticamente arquivos .ts alterados
+tsc -w
+
+// Arquivo de configuração de compilação do angular
+tsconfig.json
+
+// Executar um arquivo angular
+node <caminho_arquivo/nome_do_arquivo>
+
+----------------------------------------------
+//Marcar uma aplicação onde serão usadas bilbiotecas javascript importadas, -f para iniciar com 
+//a configuração default
+npm init -f
+
+//Instalar a biblioteca em tempo de dev e produção (--save), lodash@4.14.2
+// 0 @ é para especificar um versão em especifico
+npm install --save lodash@4.14
+
+// Salvar os tipos dessa mesma biblioteca para fazer o de-para @types/lodash@4.14.51   somente em dev (--save-dev)
+// O resultado desse comando é o arquivo packages.json com as configurações básicas da aplicação e suas dependecias
+npm install --save-dev @types/loadsh@4.14
+
+-----------------------------------------------
+//Gerar uma aplicação usando angular CLI  --prefix serve para definir o que será usado na frente de cada componente que for criado
+ng new jedi-academy --prefix=jad
+
+//Iniciar servidor angular de testes local  localhost:4200
+ng serve
+
+//Criar um componente no projeto
+// g= generate  c= component     --apec=false sem arquivos de testes   header é o nome do componente 
+ng g c header --apec=false
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

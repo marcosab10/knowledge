@@ -1,0 +1,146 @@
+
+//Install JSON Server
+npm install -g json-server
+
+//iniciar o servidor do JSON na pasta onde se encotra os fontes db.json 
+json-server --watch db.json
+
+========================================================
+
+//Build do projeto para gera APK
+ionic cordova build android
+
+//Instalar o SQLite
+ionic cordova plugin add cordova-sqlite-storage
+npm install --save @ionic/storage
+
+//Criar qualquer item novo
+ionic g 
+
+//Criar a estrutura de uma pagina em branco
+ionic generate page NewPersonPage
+
+
+//iniciar o aplicativo no servidor abrindo no browser
+ionic serve
+
+//iniciar o aplicativo em um celular
+ionic cordova run android --device
+
+//iniciar o aplicativo em um celular e a cada alteração atualizar no celular
+ionic cordova run android --device --livereload
+
+//Instalar o plugin de fazer ligações:
+ionic cordova plugin add call-number
+npm install @ionic-native/call-number
+
+//Instalar o plugin de datas:
+ionic cordova plugin add cordova-plugin-datepicker
+npm install --save @ionic-native/date-picker
+
+
+===============================================================================================================
+IONIC MULTILINGUAGEM
+
+https://ionicthemes.com/tutorials/about/internationalize-and-localize-your-ionic2-app-with-ngtranslate
+
+https://codesundar.com/ionic-multi-language-support-i18n/
+
+//Step -1 Start new ionic app:
+ionic start multilingual
+
+//Step 2: Installing angular translate and setup in ionic app:
+npm install @ngx-translate/core --save
+npm install @ngx-translate/http-loader
+
+//Step-3 Firstly import into your Service:
+import { TranslateModule } from '@ngx-translate/core';
+
+//Step -4 Secondly add into array import Section
+imports:[
+BrowserModule,
+IonicModule.forRoot(MyApp),
+TranslateModule.forRoot()
+],
+
+//Step-5 Setting up folder location for ionic 3
+This step is very important .Make folder under asssets section src/assets/i18n/ folder.
+
+In app.module.ts import the following modules:-
+
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+export function setTranslateLoader(http: Http) {
+ return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
+and config Object for .root import following Modules
+
+imports: [
+  BrowserModule,
+  IonicModule.forRoot(MyApp),
+  HttpClientModule,
+  TranslateModule.forRoot({
+  loader: {
+   provide: TranslateLoader,
+   useFactory: (setTranslateLoader),
+   deps: [HttpClient]
+ }
+})],
+
+Okay we are almost done with angular translate now it’s time to set default language into app.component.ts file. So first import the TranslateService and inject it into constructor:
+
+import { TranslateService } from '@ngx-translate/core';
+export class MyApp {
+rootPage:any = TabsPage;
+constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, translate: TranslateService) {
+ translate.setDefaultLang('en');
+ platform.ready().then(() => {
+ statusBar.styleDefault();
+ splashScreen.hide();
+});
+}
+
+
+//Step 4: Add the language files for each language
+
+In Src/assets/i18n folder under create json files .In Which language uh want to import so You have to add files per language. I have create 2 files for English and German (en.json and de.json)
+
+Here is how my both files looks like :
+
+<strong>en.json</strong>
+{
+"home":"Home",
+"about": "About",
+"contact": "Contact",
+"welcome":"Welcome to ionic",
+}
+These files contains JSON Object so that we can easily access them by using keys of object.
+
+<strong>de.json</strong>
+{
+  "home": "huis",
+  "about": "over",
+  "contact": "Contact",
+  "welcome": "Welkom bij ionic!",
+}
+
+
+Step 5: Using translation pipes to translate text in html pages
+
+ex. In home.html page under pages folder
+
+<h2>{{"home" | translate }}</h2>
+<p> 
+ {{ "about" | translate }}
+</p>
+<p> 
+ {{"welcome" | translate }}
+</p>
+
+
+
+npm remove @ngx-translate/core
+Then Install the 9.1.1 version of the @ngx-translate/core by command 
+npm install @ngx-translate/core@9.1.1 --save
+

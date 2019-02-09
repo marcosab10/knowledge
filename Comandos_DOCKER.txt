@@ -1,0 +1,117 @@
+//Help dos comandos relacionados com os containers
+docker container --help
+
+//Help dos comandos relacionados com as imagens
+docker image --help
+
+// Hello World
+docker container run hello-world
+
+// Rodar o contaneir debian no modo interativo "i" abrindo o bash "t"
+docker container run -it debian bash
+
+// Listar Contaners arivos nesse momento
+docker container ps
+
+// Listar Contaners que foram criados
+docker container ps -a
+
+// Help do metodo run
+docker container run --help
+
+// Executar um contaneir dando um nome para ele, para recuperar depois 
+docker container run --name mydeb -it debian bash
+
+// Listar os containers ativos que foram criados ou "ps"
+docker container ls
+
+// Listar os containers que foram criados independete dos status
+docker container ls -a
+
+// Carregar um container já criado "a" attach "i" interativo
+docker container start -ai mydeb
+
+// Mapear uma porta de dentro do container "80" para poder acessar na maquina HOST "9090"
+// e a imagem nginx para iniciar o servidor do nginx
+docker container run -p 9090:80 nginx
+
+// Mapear um volume pasta de dentro do container "80" para poder acessar na maquina HOST "9090"
+// e a imagem nginx para iniciar o servidor do nginx
+docker container run -p 9090:80 -v C:/curso-docker/ex-volume:/usr/share/nginx/html nginx
+
+// -- e fazer com que o ngnix use o index.html que está dentro da pasta do Host como pagina inicial
+docker container run -p 9090:80 -v C:/curso-docker/ex-volume/html:/usr/share/nginx/html nginx
+
+// Inicializar o container em backgroud "-d" dando um nome para ele
+docker container run -d --name ex-daemo-basic -p 9090:80 -v C:/curso-docker/ex-volume/html:/usr/share/nginx/html nginx
+
+// Iniciar um container
+docker container start <nome_container>
+
+// Parar um container
+docker container stop <nome_container>
+
+// Reiniciar um container
+docker container restart <nome_container>
+
+// Remover um container
+docker container rm <nome_container>
+
+// Exibir os logs do container do que foi executado
+docker container logs <nome_container>
+
+// Exibir os dados do container
+docker container inspect <nome_container>
+
+// Exibir o tipo do sistema que está sendo executado dentro do container
+docker container exec <nome_container> uname -or
+
+// Listar todos containers que estão ativos 
+docker container ls
+
+// Listar todas imagens que estão ativas 
+docker image ls
+
+// Listar todos volumes que estão criados na maquina local 
+docker volume ls
+
+// Baixar uma imagem 
+docker image pull redis:latest
+
+// Inspecionar uma imagem 
+docker image inspect redis:latest
+
+// Criar uma tag para uma imagem  <tag_original> <tag_nova>
+docker image tag redis:latest cod-redis
+
+// Deletar imagens
+docker image rm redis:latest cod-redis
+
+//Buildar uma imagem -t é a tag para nomear a imagem . é para buscar o Dockerfile no diretorio local
+docker image build -t ex-simple-build .
+
+// Executando o container criado acima
+docker container run -p 80:80 ex-simple-build
+
+// Criando uma nova imagem 
+docker image build -t ex-build-arg .
+
+// Executando o container criado acima, dando um echo na variável de ambiente S3_BUCKET
+docker container run ex-build-arg bash -c 'echo $S3_BUCKET'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

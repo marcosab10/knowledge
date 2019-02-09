@@ -1,0 +1,39 @@
+1- Loga na maquina TUNEL via putty:
+
+IP: 10.41.254.249 porta: 22
+
+ 
+Usuário: 80533839
+Senha: Brq@4321
+ 
+2- Muda para o usuário de acesso aos logs:
+sudo su - prd1vlog      
+
+3- Entra na maquina da esteira
+
+QA1
+ssh svuxqa1soa50
+
+QA2
+ssh svuxqa2soa50
+gvt25
+
+QA3
+ssh svuxqsoa107
+
+QA6
+ssh svuxqa6soa50
+
+
+4- Pasta de log: 
+cd /app/prd1bea/logs/domosb116qa3/proxy/
+
+ 
+Exemplo de comandos de pesquisa:  
+find . -iname "*" -exec grep -l '1121116194' {} \;   
+
+Exemplo de comandos de pesquisa para arquivos já compactados:
+find . -iname "*" -exec zgrep -l '1121116194' {} \;              
+ 
+zgrep -B 1 '8-3312742787-1' *.log.zip
+grep -B 1 '8-3653379346-1' *.log
