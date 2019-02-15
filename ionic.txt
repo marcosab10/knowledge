@@ -1,8 +1,44 @@
 
+//Configurar para usar a camera nativa
+ionic cordova plugin add cordova-plugin-camera
+npm install @ionic-native/camera
+
+You need to add the "Privacy - Camera usage description" key to your app’s Info.plist, clicando no botao de +
+https://stackoverflow.com/questions/39465687/nscamerausagedescription-in-ios-10-0-runtime-crash
+
+"File" > "Project Settings..."  and then select "Legacy Build System" from the "Build System"
+https://stackoverflow.com/questions/52424462/xcode-10-a-valid-provisioning-profile-for-this-executable-was-not-found
+
+//registar o App ID na Apple
+https://clearbridgemobile.com/how-to-create-a-distribution-provisioning-profile-for-ios/
+//[IOS] Realizar o build da aplicacao para abrir no Xcode, --prod para produção
+ionic cordova build ios --prod
+
+//Adicioanr a plataforma de ios
+ionic cordova platform add ios
+
+//[ANDROID] emular na plataforma
+ionic cordova emulate android
+
+// https://gradle.org/install/
+//Linux & MacOS users
+//Configure your PATH environment variable to include the bin directory of the unzipped distribution, e.g.:
+export PATH=$PATH:/Users/marcosfaria/gradle-5.2.1/bin
+
+// adicionar a plataforma do ios
+ionic cordova platform add ios
+
+// adicionar a plataforma do android
+ionic cordova platform add android
+
+//após baixar a aplicacao do git rodar esse comando para instyalar todas as dependecias
+npm install
+
+=======================================================
 //Install JSON Server
 npm install -g json-server
 
-//iniciar o servidor do JSON na pasta onde se encotra os fontes db.json 
+//iniciar o servidor do JSON na pasta onde se encotra os fontes db.json
 json-server --watch db.json
 
 ========================================================
@@ -15,7 +51,7 @@ ionic cordova plugin add cordova-sqlite-storage
 npm install --save @ionic/storage
 
 //Criar qualquer item novo
-ionic g 
+ionic g
 
 //Criar a estrutura de uma pagina em branco
 ionic generate page NewPersonPage
@@ -131,16 +167,15 @@ Step 5: Using translation pipes to translate text in html pages
 ex. In home.html page under pages folder
 
 <h2>{{"home" | translate }}</h2>
-<p> 
+<p>
  {{ "about" | translate }}
 </p>
-<p> 
+<p>
  {{"welcome" | translate }}
 </p>
 
 
 
 npm remove @ngx-translate/core
-Then Install the 9.1.1 version of the @ngx-translate/core by command 
+Then Install the 9.1.1 version of the @ngx-translate/core by command
 npm install @ngx-translate/core@9.1.1 --save
-

@@ -14,7 +14,7 @@ git init
 //Status do repositorio local
 git status
 
-//Adicionar todos os arquivos recursivamente 
+//Adicionar todos os arquivos recursivamente
 git add --all
 
 // Commitar os arquivos com um comentário
@@ -58,13 +58,16 @@ git reset HEAD <nome_arquivo>
 
 //Voltar versoes do repositorio
 git reset     <hash_anterior>
---soft //volta para o staged 
+--soft //volta para o staged
 --mixed //volta para antes do staged, modified
 --hard// ignora a existecia do commit e tudo que foi feito nele
 
 //or push an existing repository from the command line
-git remote add BRQ https://github.com/marcosab10/BRQ.git
-git push -u BRQ master
+git remote add ionic https://github.com/marcosab10/ionic.git
+git push -u ionic master
+
+//Realizar o checkout do repositorio
+git pull -u ios master
 
 //Mostra o repositorio remoto
 git remote
@@ -73,19 +76,19 @@ git remote
 git remote -v
 
 //Enviar as alterações commitadas locais para o repositorio remoto
-git push <repositorio_destino> <repositorio_origem> 
+git push <repositorio_destino> <repositorio_origem>
 git push BRQ master
 
 //Baixar tudo o que tem um repositorio em uma nova pasta
-g clone git@github.com:marcosab10/BRQ.git <nome_da_pasta>
+git clone git@github.com:marcosab10/BRQ.git <nome_da_pasta>
 
-//Criar um novo branch a partir do original 
+//Criar um novo branch a partir do original
 git checkout -b <nome_novo_branch>
 
 //Mostrar os branchs existentes
 git branch
 
-//Mudar de branch 
+//Mudar de branch
 git checkout <nome_branch>
 
 //Apagar um branch
@@ -97,7 +100,7 @@ git config --global alias.s status
 //Criar tags para mostrar versionamento
 git tag -a 1.0.0 -m "Primeira Release"
 
-//Para subir as tags para o repositorio 
+//Para subir as tags para o repositorio
 git push BRQ master --tags
 
 //Visualizar as tags locais
@@ -111,14 +114,3 @@ git tag -d <nome_da_tag>
 
 //Apagar tags remotas
 git push BRQ :<nome_da_tag>
-
-
-
-
-
-
-
-
-
-
-
