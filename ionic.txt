@@ -1,4 +1,21 @@
 
+// Mudanças do Ionic 3 para o Ionic 4
+
+https://medium.com/modus-create-front-end-development/upgrading-an-ionic-3-application-to-ionic-4-eaf81a53cdea
+
+https://github.com/ionic-team/ionic/issues/15076
+
+https://www.joshmorony.com/converting-ionic-3-push-pop-navigation-to-angular-routing-in-ionic-4/
+https://www.joshmorony.com/using-angular-routing-with-ionic-4/
+https://www.joshmorony.com/implementing-a-master-detail-pattern-in-ionic-4-with-angular-routing/
+
+
+
+==================================================================================================================
+//[ANDROID] Emulador com mudanças em tempo real
+ionic cordova emulate android --livereload -cs
+
+
 //Configurar para usar a camera nativa
 ionic cordova plugin add cordova-plugin-camera
 npm install @ionic-native/camera
@@ -34,14 +51,14 @@ ionic cordova platform add android
 //após baixar a aplicacao do git rodar esse comando para instyalar todas as dependecias
 npm install
 
-=======================================================
+=====================================================================================================================
 //Install JSON Server
 npm install -g json-server
 
 //iniciar o servidor do JSON na pasta onde se encotra os fontes db.json
 json-server --watch db.json
 
-========================================================
+=====================================================================================================================
 
 //Build do projeto para gera APK
 ionic cordova build android
