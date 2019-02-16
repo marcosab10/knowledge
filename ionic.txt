@@ -1,4 +1,10 @@
 
+
+// How to generate API keys
+https://github.com/ionic-team/ionic-native-google-maps/blob/master/documents/api_key/generate_api_key.md
+
+
+==================================================================================================================
 // Mudanças do Ionic 3 para o Ionic 4
 
 https://medium.com/modus-create-front-end-development/upgrading-an-ionic-3-application-to-ionic-4-eaf81a53cdea
@@ -8,8 +14,6 @@ https://github.com/ionic-team/ionic/issues/15076
 https://www.joshmorony.com/converting-ionic-3-push-pop-navigation-to-angular-routing-in-ionic-4/
 https://www.joshmorony.com/using-angular-routing-with-ionic-4/
 https://www.joshmorony.com/implementing-a-master-detail-pattern-in-ionic-4-with-angular-routing/
-
-
 
 ==================================================================================================================
 //[ANDROID] Emulador com mudanças em tempo real
@@ -31,7 +35,7 @@ https://clearbridgemobile.com/how-to-create-a-distribution-provisioning-profile-
 //[IOS] Realizar o build da aplicacao para abrir no Xcode, --prod para produção
 ionic cordova build ios --prod
 
-//Adicioanr a plataforma de ios
+//Adicionar a plataforma de ios
 ionic cordova platform add ios
 
 //[ANDROID] emular na plataforma
