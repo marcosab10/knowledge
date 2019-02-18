@@ -22,11 +22,11 @@ platforms/ios/cordova/../pods-debug.xcconfig:2: could not find included file 'Po
 
 //Configurar para usar o Google Maps Ionic 3
 npm install @ionic-native/core @ionic-native/google-maps
-ionic cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyBo4FeW3nnJJEw6Emtea95M280dly_-Y2U" --variable API_KEY_FOR_IOS="AIzaSyDVdMh_zBQ1rSBo7nx5FCwKmuCB0f0t6vQ"
+ionic cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="..." --variable API_KEY_FOR_IOS="..."
 
 Ionic 4
 npm install @ionic-native/core@beta @ionic-native/google-maps@beta
-ionic cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyBo4FeW3nnJJEw6Emtea95M280dly_-Y2U" --variable API_KEY_FOR_IOS="AIzaSyDVdMh_zBQ1rSBo7nx5FCwKmuCB0f0t6vQ"
+ionic cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="..." --variable API_KEY_FOR_IOS="..."
 
 Caso não funcione:
 $> cordova platform rm ios android browser
