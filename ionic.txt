@@ -1,8 +1,42 @@
 
 
+
+==================================================MAPS NAO FUNCIONOU==============================================
+//Posicao da Camera no Mapa
+https://github.com/ionic-team/ionic-native-google-maps/tree/master/documents/cameraposition
+
+https://github.com/mapsplugin/cordova-plugin-googlemaps-doc/blob/master/v2.0.0/ionic-native/README.md
+
+cordova plugin save
+cordova platform rm ios
+cordova platform add ios
+
+* ERROR in node_modules/@ionic-native/google-maps/index.d.ts(2,10): error TS2305: Module '"/Users/marcosfaria/Desktop/git/ionic/ionic3_recursos_nativos/AppCamera/node_modules/rxjs/Observable"' has no exported member 'Observable'.
+node_modules/rxjs/Observable.d.ts(1,15): error TS2307: Cannot find module 'rxjs-compat/Observable'.
+
+SOLUCAO: npm install --save rxjs-compat
+
+ERRO:
+platforms/ios/cordova/../pods-debug.xcconfig:2: could not find included file 'Pods/Target Support Files/Pods-GT06/Pods-GT06.debug.xcconfig' in search paths (in target 'GT06')
+
+
+//Configurar para usar o Google Maps Ionic 3
+npm install @ionic-native/core @ionic-native/google-maps
+ionic cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyBo4FeW3nnJJEw6Emtea95M280dly_-Y2U" --variable API_KEY_FOR_IOS="AIzaSyDVdMh_zBQ1rSBo7nx5FCwKmuCB0f0t6vQ"
+
+Ionic 4
+npm install @ionic-native/core@beta @ionic-native/google-maps@beta
+ionic cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="AIzaSyBo4FeW3nnJJEw6Emtea95M280dly_-Y2U" --variable API_KEY_FOR_IOS="AIzaSyDVdMh_zBQ1rSBo7nx5FCwKmuCB0f0t6vQ"
+
+Caso não funcione:
+$> cordova platform rm ios android browser
+$> cordova plugin rm cordova-plugin-googlemaps
+$> cordova plugin add cordova-plugin-googlemaps --variable ...
+$> ionic cordova platform add android ios browser
+
+
 // How to generate API keys
 https://github.com/ionic-team/ionic-native-google-maps/blob/master/documents/api_key/generate_api_key.md
-
 
 ==================================================================================================================
 // Mudanças do Ionic 3 para o Ionic 4
