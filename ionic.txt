@@ -1,5 +1,22 @@
 
 
+//Remover o plugin instalado
+ionic cordova plugin remove phonegap-plugin-push
+npm uninstall @ionic-native/push
+
+//Listar os plugins instalados na aplicacao
+ionic cordova plugin list
+
+==================================================================================================================
+ERRO: node Sass could not find a binding for your current environment: OS X 64-bit with Node.js 11.x
+[ng] Found bindings for the following environments:
+[ng]   - OS X 64-bit with Node.js 10.x
+[ng] This usually happens because your environment has changed since running `npm install`.
+
+
+SOLUCAO: npm rebuild node-sass
+
+
 
 ==================================================MAPS NAO FUNCIONOU==============================================
 //Posicao da Camera no Mapa
