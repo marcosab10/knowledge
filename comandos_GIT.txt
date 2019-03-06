@@ -67,7 +67,7 @@ git remote add ionic https://github.com/marcosab10/ionic.git
 git push -u ionic master
 
 //Realizar o checkout do repositorio
-git pull -u ios master
+git pull ios master
 
 //Mostra o repositorio remoto
 git remote
