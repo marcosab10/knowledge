@@ -1,4 +1,29 @@
-// instalar o cli do angular para criação de projetos 
+
+//Forms
+
+//Form valido
+{{form.valid}}
+
+//Valor do form em json
+{{form.value | json }}
+
+// novalidate para nao usar a validacao do browser
+// #form="ngForm" criando uma variavel para representar o form
+<form #form="ngForm" novalidate>
+
+===============================================================================
+//habilitar modo root no terminal do  MacBook
+$dsenableroot
+
+//Comando para atualizar no npm na maquina
+sudo npm install npm -g
+
+$sudo passwd root
+
+//Quem sou eu
+$whoami
+===============================================================================
+// instalar o cli do angular para criação de projetos
 npm install -g @angular/cli
 
 // instalar o compilador de typescript
@@ -17,7 +42,7 @@ tsconfig.json
 node <caminho_arquivo/nome_do_arquivo>
 
 ----------------------------------------------
-//Marcar uma aplicação onde serão usadas bilbiotecas javascript importadas, -f para iniciar com 
+//Marcar uma aplicação onde serão usadas bilbiotecas javascript importadas, -f para iniciar com
 //a configuração default
 npm init -f
 
@@ -37,33 +62,5 @@ ng new jedi-academy --prefix=jad
 ng serve
 
 //Criar um componente no projeto
-// g= generate  c= component     --apec=false sem arquivos de testes   header é o nome do componente 
+// g= generate  c= component     --apec=false sem arquivos de testes   header é o nome do componente
 ng g c header --apec=false
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
