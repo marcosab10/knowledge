@@ -1,4 +1,36 @@
+Build da Aplicação
 
+//compilar para produção
+ng build --prod
+
+
+//Iniciar um servidor simples de Http na pasta dist gerada pela compilação
+ python -m SimpleHTTPServer 8000
+
+ //Uma maneira de testar as variaveis de produção no ambiente de desenvolvimento
+ ng serve --prod
+
+ // Gerar um build de produção para funcionar em um novo caminho raiz, exemplo pasta meat
+ ng --prod --bh=/meat/
+
+===============================================================================
+//Animancoes
+
+npm install --save @angular/animations@4.0.0
+npm install --save web-animations-js
+
+
+importa no polyfills:
+import 'web-animations-js/web-animations.min.js'
+
+importa no modulo principal da aplicação o:
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
+e adiciona na lista de imports global o BrowserAnimationsModule para ficar disponivel para toda a aplicacao
+
+
+
+===============================================================================
 //Forms
 
 //Form valido
