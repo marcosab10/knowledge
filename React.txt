@@ -1,0 +1,31 @@
+
+
+
+// Rodar o projeto no emulador do android
+react-native start   em um console
+react-native run-android   em outro console
+
+
+// Iniciar um projeto
+react-native init exercicios
+
+// Instalar o react native no mac
+sudo npm i -g react-native-cli
+
+// Iniciar o emulador ANDROID
+emulator -avd Nexus_5X_API_29
+
+
+// editar o arquivo de configuração
+nano .bash_profile
+
+com seguinte conteudo:
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Ho$
+
+export ANDROID_HOME=/Users/marcosfaria/Library/Android/sdk/
+
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
