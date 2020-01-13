@@ -120,3 +120,12 @@ git reset --hard
 
 # Remove all untracked files and directories. (`-f` is `force`, `-d` is `remove directories`)
 git clean -fd
+
+# Verificar o hash da branch
+git rev-parse HEAD
+
+# clonar a branch numa nova branch
+git checkout -b marcao-test-preprod 40c283ff2017c22b95718c888e25a3dd4c388c1a
+
+# Enviar a branch criada locamente para o repositório remoto
+git push --set-upstream origin marcao-test-preprod
