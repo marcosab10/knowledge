@@ -100,8 +100,13 @@ docker image build -t ex-build-arg .
 docker container run ex-build-arg bash -c 'echo $S3_BUCKET'
 
 
+// Executar o mongo em um container
+docker run --name mongodb -d -p 27017:27017 -p 28017:28017 -e AUTH=no tutum/mongodb
 
+http://192.168.99.100:27017/
 
+npm install mongoose
+npm install require-dir
 
 
 
