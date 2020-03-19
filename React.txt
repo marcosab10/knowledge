@@ -1,8 +1,11 @@
 
 
+// No emulador para habilitar o live reload e hot reloading
+CTRL M
+
 
 // Rodar o projeto no emulador do android
-react-native start   em um console
+react-native start   em um console 
 react-native run-android   em outro console
 
 
