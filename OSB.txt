@@ -1,2 +1,0 @@
-fn-bea:serialize($orderPublicationIn1/customerOrder) xml to string
-fn-bea:inlinedXML(“String”) string to xml 
