@@ -129,3 +129,12 @@ git checkout -b marcao-test-preprod 40c283ff2017c22b95718c888e25a3dd4c388c1a
 
 # Enviar a branch criada locamente para o repositório remoto
 git push --set-upstream origin marcao-test-preprod
+
+# Ignorar globalmente alguns arquivos pelo git, onde .gitignore_global contem as definições globais de exclusão 
+git config --global core.excludesfile ~/.gitignore_global
+
+# Remover o git da pasta e subpastas
+rm -rf .git
+
+# Verificar se os arquivos .git foram removidos
+ls -lah
