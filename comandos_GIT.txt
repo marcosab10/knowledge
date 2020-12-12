@@ -138,3 +138,7 @@ rm -rf .git
 
 # Verificar se os arquivos .git foram removidos
 ls -lah
+
+# Remover um remote
+git remote rm destination
+
