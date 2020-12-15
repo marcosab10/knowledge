@@ -142,3 +142,8 @@ ls -lah
 # Remover um remote
 git remote rm destination
 
+# To change locally for just one repository, enter in terminal, from within the repository
+git config credential.username "new_username"
+
+# To change globally use
+git config --global credential.username "new_username"
